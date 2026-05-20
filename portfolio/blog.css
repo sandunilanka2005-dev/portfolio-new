@@ -1,9 +1,9 @@
 
 :root {
-    --bg-color: #0F172A;       /* Deep Navy/Dark Blue Background */
-    --card-bg: #1E293B;        /* Muted Blue-Grey for Cards */
-    --text-main: #F8FAFC;      /* Very Light Cream/White for Main Text */
-    --text-muted: #94A3B8;     /* Soft Blue-Grey for Paragraphs */
+    --bg-color:rgb(83, 112, 127);      
+    --card-bg: #1E293B;        
+    --text-main: #F8FAFC;     
+    --text-muted: #94A3B8;    
     --accent: #38BDF8;         
 }
 
