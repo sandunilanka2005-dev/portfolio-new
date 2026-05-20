@@ -1,0 +1,161 @@
+/* ==========================================================================
+   1. GLOBAL / COMMON STYLES (පොදු කේත කොටස්)
+   ========================================================================== */
+:root {
+    --bg-color: #0F172A;       /* Deep Navy/Dark Blue Background */
+    --card-bg: #1E293B;        /* Muted Blue-Grey for Cards */
+    --text-main: #F8FAFC;      /* Very Light Cream/White for Main Text */
+    --text-muted: #94A3B8;     /* Soft Blue-Grey for Paragraphs */
+    --accent: #38BDF8;         /* Vibrant Sky Blue for Highlights */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    overflow-x: hidden; /* පේජ් එක දෙපැත්තට හෙලවීම වැළැක්වීමට */
+}
+
+/* 3. හැම පිටුවක්ම මැදින් පිළිවෙලට පිහිටන්න (Center align) දාන Main Container එක */
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* 4. හැම පිටුවකම තියෙන Boxes වල පොදු හැඩය */
+.card, .article-card, .contact-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* 2. .blog-navbar කොටස */
+.blog-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 20px;
+}
+
+.blog-navbar h1 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+    color: var(--text-main);
+}
+
+.nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 20px;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* --- Article Card Layout --- */
+.article-card {
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.article-card h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-top: 0;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.article-card p {
+    color: var(--text-muted);
+    font-size: 16px;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+/* --- Read Article Button --- */
+.btn-medium {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--accent);
+    color: #0F172A;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-medium:hover {
+    background-color: #7dd3fc;
+    transform: translateY(-1px);
+}
+
+
+/* ==========================================================================
+   5. 📱 ADDED RESPONSIVE MEDIA QUERIES (ජංගම දුරකථන සඳහා විශේෂ සැකසුම්)
+   ========================================================================== */
+@media (max-width: 600px) {
+    .container {
+        padding: 30px 16px; /* කුඩා screen වල දෙපැත්තේ ඉඩ ප්‍රමාණය (padding) අඩු කරයි */
+    }
+
+    /* Navbar Responsive Layout */
+    .blog-navbar {
+        flex-direction: column; /* "My Blog" නම සහ Menu ලින්ක්ස් එක යටට එකක් සිටින සේ සකසයි */
+        align-items: flex-start;
+        gap: 15px;
+        margin-bottom: 35px;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 20px;
+    }
+
+    .nav-links a {
+        margin-left: 0; /* ජංගම දුරකථන වලදී පැරණි වම්පස පරතරය ඉවත් කරයි */
+    }
+
+    /* Article Card Responsive Layout */
+    .article-card {
+        padding: 25px 20px; /* පෙට්ටිය ඇතුළත ඉඩ ප්‍රමාණය අඩු කරයි */
+        border-radius: 12px;
+    }
+
+    .article-card h2 {
+        font-size: 20px; /* මාතෘකාව ජංගම දුරකථනයට ගැළපෙන සේ කුඩා කරයි */
+        margin-bottom: 15px;
+    }
+
+    .article-card p {
+        font-size: 15px; /* ඡේදයේ අකුරු සුළු වශයෙන් කුඩා කරයි */
+        text-align: left; /* ජංගම දුරකථන වල කියවීමේ පහසුව සඳහා text align එක වමට සකසයි */
+        margin-bottom: 25px;
+    }
+
+    /* Button Adjustment */
+    .btn-medium {
+        width: 100%; /* බටන් එක ජංගම දුරකථන වලදී මුළු පළලටම (Full width) දිග හැරේ */
+        justify-content: center; /* බටන් එක ඇතුළේ ඇති අකුරු මැදට (Center) කරයි */
+        box-sizing: border-box;
+    }
+}

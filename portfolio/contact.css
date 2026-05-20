@@ -1,0 +1,265 @@
+/* ==========================================================================
+   1. GLOBAL / COMMON STYLES (පිටු තුනටම පොදු කේත කොටස්)
+   ========================================================================== */
+:root {
+    --bg-color: #0F172A;       /* Deep Navy Background */
+    --card-bg: #1E293B;        /* Muted Blue-Grey for Cards */
+    --text-main: #F8FAFC;      /* Light Cream/White for Text */
+    --text-muted: #94A3B8;     /* Soft Blue-Grey for Paragraphs */
+    --accent: #38BDF8;         /* Vibrant Sky Blue for Highlights */
+    --menu-bg: #0B0F19;        /* Ultra Dark Blue for Menu */
+    --progress-bg: #334155;    /* Empty progress background */
+    --input-bg: #0F172A;       /* Dark Blue for Contact Inputs */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 700px; /* පිටු හැම එකක්ම එකම පළලකට තබා ගැනීමට */
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* හැම පිටුවකම තියෙන පෙට්ටි (Cards) වල පොදු හැඩය */
+.card, .article-card, .contact-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+
+/* ==========================================================================
+   2. INDEX / HOME PAGE SPECIFIC STYLES
+   ========================================================================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.navbar h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.5px;
+    color: var(--text-main);
+}
+
+.card h2 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent);
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.card p { color: var(--text-muted); margin: 0; }
+
+/* Skills Section Bars */
+.skills-container { display: flex; flex-direction: column; gap: 20px; }
+.skill-item { display: flex; flex-direction: column; gap: 8px; }
+.skill-info { display: flex; justify-content: space-between; font-size: 14px; font-weight: 600; }
+.skill-name { color: var(--text-main); }
+.skill-level { color: var(--accent); }
+.progress-bar-bg { width: 100%; height: 12px; background-color: var(--progress-bg); border-radius: 9999px; overflow: hidden; }
+.progress-bar-fill { height: 100%; border-radius: 9999px; background: linear-gradient(90deg, #0ea5e9, var(--accent)); }
+.w-intermediate { width: 65%; }
+.w-beginner { width: 40%; }
+
+/* Hamburger Navigation menu */
+#menu-toggle { display: none; }
+.hamburger-label { font-size: 24px; cursor: pointer; color: var(--accent); z-index: 1001; }
+.nav-menu { position: fixed; top: 0; right: -300px; width: 300px; height: 100vh; background-color: var(--menu-bg); padding: 80px 30px; box-sizing: border-box; transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1); z-index: 1000; box-shadow: -10px 0 30px rgba(0,0,0,0.5); }
+#menu-toggle:checked ~ .nav-menu { right: 0; }
+#menu-toggle:checked ~ .navbar .hamburger-label::before { content: "\2715"; color: white; position: fixed; right: 20px; top: 20px; }
+.nav-menu a { display: block; color: var(--text-muted); text-decoration: none; font-size: 18px; padding: 15px 0; border-bottom: 1px solid #1E293B; transition: 0.2s; }
+.nav-menu a:hover { color: white; padding-left: 10px; }
+
+
+/* ==========================================================================
+   3. BLOG PAGE SPECIFIC STYLES
+   ========================================================================== */
+.blog-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 20px;
+}
+
+.blog-navbar h1 { font-size: 20px; font-weight: 700; margin: 0; color: var(--text-main); }
+.nav-links a { color: var(--text-muted); text-decoration: none; font-size: 14px; font-weight: 600; margin-left: 20px; transition: color 0.2s; }
+.nav-links a:hover { color: var(--accent); }
+.article-card { padding: 40px; }
+.article-card h2 { font-size: 24px; font-weight: 700; color: var(--text-main); margin-top: 0; margin-bottom: 20px; line-height: 1.3; }
+.article-card p { color: var(--text-muted); font-size: 16px; margin-bottom: 30px; text-align: justify; }
+.btn-medium { display: inline-flex; align-items: center; background-color: var(--accent); color: #0F172A; text-decoration: none; padding: 12px 24px; border-radius: 8px; font-size: 15px; font-weight: 700; transition: background-color 0.2s, transform 0.2s; }
+.btn-medium:hover { background-color: #7dd3fc; transform: translateY(-1px); }
+
+
+/* ==========================================================================
+   4. CONTACT PAGE SPECIFIC STYLES
+   ========================================================================== */
+.contact-card h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.contact-card p.subtitle {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-bottom: 30px;
+    margin-top: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    background-color: var(--input-bg);
+    color: var(--text-main);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    margin-bottom: 20px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+button[type="submit"] {
+    background-color: var(--accent);
+    color: #0F172A;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover { background-color: #7dd3fc; }
+button[type="submit"]:active { transform: scale(0.98); }
+#output { margin-top: 20px; font-size: 14px; text-align: center; font-weight: 600; }
+
+
+/* ==========================================================================
+   5. 📱 ADDED RESPONSIVE MEDIA QUERIES (පිටු 3ටම පොදු ජංගම දුරකථන සැකසුම්)
+   ========================================================================== */
+@media (max-width: 600px) {
+    /* 1. Global Container & Cards */
+    .container {
+        padding: 30px 16px; /* කුඩා screen වල දෙපැත්තේ padding අඩු කරයි */
+    }
+
+    .card, .article-card, .contact-card {
+        padding: 20px; /* පෙට්ටි ඇතුළත ඇති ඉඩ ප්‍රමාණය අඩු කරයි */
+        border-radius: 12px;
+    }
+
+    /* 2. Home Page Navbar & Menu Drawer */
+    .navbar {
+        margin-bottom: 35px;
+    }
+
+    .navbar h1 {
+        font-size: 22px; /* මාතෘකාව ජංගම දුරකථනයට ගැළපෙන සේ කුඩා කරයි */
+    }
+
+    .nav-menu {
+        width: 80%; /* ජංගම දුරකථන වලදී මෙනු එක තිරයෙන් 80%ක් පළලට දිග හැරේ */
+        right: -80%;
+    }
+
+    /* 3. Blog Page Adjustments */
+    .blog-navbar {
+        flex-direction: column; /* "My Blog" නම සහ Menu ලින්ක්ස් එක යටට එකක් සිටින සේ සකසයි */
+        align-items: flex-start;
+        gap: 15px;
+        margin-bottom: 35px;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 15px;
+    }
+
+    .nav-links a {
+        margin-left: 0; /* පැරණි වම්පස පරතරය ඉවත් කරයි */
+    }
+
+    .article-card h2 {
+        font-size: 20px;
+    }
+
+    .article-card p {
+        font-size: 15px;
+        text-align: left; /* ජංගම දුරකථන වල කියවීමේ පහසුව සඳහා text align එක වමට සකසයි */
+    }
+
+    .btn-medium {
+        width: 100%; /* බටන් එක ජංගම දුරකථන වලදී මුළු පළලටම (Full width) දිග හැරේ */
+        justify-content: center;
+        box-sizing: border-box;
+    }
+
+    /* 4. Contact Page Adjustments */
+    .contact-card h2 {
+        font-size: 20px;
+    }
+
+    .contact-card p.subtitle {
+        margin-bottom: 20px;
+    }
+
+    input[type="text"], input[type="email"], textarea {
+        font-size: 14px;
+        padding: 10px 14px;
+    }
+
+    button[type="submit"] {
+        font-size: 15px;
+        padding: 12px;
+    }
+}
