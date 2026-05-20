@@ -4,7 +4,7 @@
     --card-bg: #1E293B;        /* Muted Blue-Grey for Cards */
     --text-main: #F8FAFC;      /* Very Light Cream/White for Main Text */
     --text-muted: #94A3B8;     /* Soft Blue-Grey for Paragraphs */
-    --accent: #38BDF8;         /* Vibrant Sky Blue for Highlights */
+    --accent: #38BDF8;         
 }
 
 body {
@@ -150,8 +150,8 @@ body {
 
     /* Button Adjustment */
     .btn-medium {
-        width: 100%; /* බටන් එක ජංගම දුරකථන වලදී මුළු පළලටම (Full width) දිග හැරේ */
-        justify-content: center; /* බටන් එක ඇතුළේ ඇති අකුරු මැදට (Center) කරයි */
+        width: 100%; 
+        justify-content: center; 
         box-sizing: border-box;
     }
 }
