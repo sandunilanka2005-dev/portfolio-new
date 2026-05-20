@@ -1,13 +1,13 @@
 
 :root {
-    --bg-color: #0F172A;       /* Deep Navy Background */
-    --card-bg: #1E293B;        /* Muted Blue-Grey for Cards */
-    --text-main: #F8FAFC;      /* Light Cream/White for Text */
-    --text-muted: #94A3B8;     /* Soft Blue-Grey for Paragraphs */
-    --accent: #38BDF8;         /* Vibrant Sky Blue for Highlights */
-    --menu-bg: #0B0F19;        /* Ultra Dark Blue for Menu */
-    --progress-bg: #334155;    /* Empty progress background */
-    --input-bg: #0F172A;       /* Dark Blue for Contact Inputs */
+    --bg-color:rgb(83, 112, 127);       
+    --card-bg: #1E293B;        
+    --text-main: #F8FAFC;      
+    --text-muted: #94A3B8;     
+    --accent: #38BDF8;         
+    --menu-bg: #0B0F19;      
+    --progress-bg: #334155;  
+    --input-bg: #0F172A;       
 }
 
 body {
