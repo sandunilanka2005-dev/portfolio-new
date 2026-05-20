@@ -1,6 +1,4 @@
-/* ==========================================================================
-   1. GLOBAL / COMMON STYLES (පොදු කේත කොටස්)
-   ========================================================================== */
+
 :root {
     --bg-color: #0F172A;       /* Deep Navy/Dark Blue Background */
     --card-bg: #1E293B;        /* Muted Blue-Grey for Cards */
@@ -16,17 +14,17 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    overflow-x: hidden; /* පේජ් එක දෙපැත්තට හෙලවීම වැළැක්වීමට */
+    overflow-x: hidden; 
 }
 
-/* 3. හැම පිටුවක්ම මැදින් පිළිවෙලට පිහිටන්න (Center align) දාන Main Container එක */
+
 .container {
     max-width: 700px;
     margin: 0 auto;
     padding: 60px 20px;
 }
 
-/* 4. හැම පිටුවකම තියෙන Boxes වල පොදු හැඩය */
+
 .card, .article-card, .contact-card {
     background: var(--card-bg);
     padding: 30px;
@@ -35,7 +33,7 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* 2. .blog-navbar කොටස */
+
 .blog-navbar {
     display: flex;
     justify-content: space-between;
@@ -110,17 +108,15 @@ body {
 }
 
 
-/* ==========================================================================
-   5. 📱 ADDED RESPONSIVE MEDIA QUERIES (ජංගම දුරකථන සඳහා විශේෂ සැකසුම්)
-   ========================================================================== */
+/* responsive for all devices */
 @media (max-width: 600px) {
     .container {
-        padding: 30px 16px; /* කුඩා screen වල දෙපැත්තේ ඉඩ ප්‍රමාණය (padding) අඩු කරයි */
+        padding: 30px 16px; 
     }
 
     /* Navbar Responsive Layout */
     .blog-navbar {
-        flex-direction: column; /* "My Blog" නම සහ Menu ලින්ක්ස් එක යටට එකක් සිටින සේ සකසයි */
+        flex-direction: column; 
         align-items: flex-start;
         gap: 15px;
         margin-bottom: 35px;
@@ -132,23 +128,23 @@ body {
     }
 
     .nav-links a {
-        margin-left: 0; /* ජංගම දුරකථන වලදී පැරණි වම්පස පරතරය ඉවත් කරයි */
+        margin-left: 0; 
     }
 
     /* Article Card Responsive Layout */
     .article-card {
-        padding: 25px 20px; /* පෙට්ටිය ඇතුළත ඉඩ ප්‍රමාණය අඩු කරයි */
+        padding: 25px 20px; 
         border-radius: 12px;
     }
 
     .article-card h2 {
-        font-size: 20px; /* මාතෘකාව ජංගම දුරකථනයට ගැළපෙන සේ කුඩා කරයි */
+        font-size: 20px; 
         margin-bottom: 15px;
     }
 
     .article-card p {
-        font-size: 15px; /* ඡේදයේ අකුරු සුළු වශයෙන් කුඩා කරයි */
-        text-align: left; /* ජංගම දුරකථන වල කියවීමේ පහසුව සඳහා text align එක වමට සකසයි */
+        font-size: 15px; 
+        text-align: left; 
         margin-bottom: 25px;
     }
 
