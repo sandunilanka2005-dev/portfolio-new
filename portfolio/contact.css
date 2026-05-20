@@ -1,6 +1,4 @@
-/* ==========================================================================
-   1. GLOBAL / COMMON STYLES (පිටු තුනටම පොදු කේත කොටස්)
-   ========================================================================== */
+
 :root {
     --bg-color: #0F172A;       /* Deep Navy Background */
     --card-bg: #1E293B;        /* Muted Blue-Grey for Cards */
@@ -23,12 +21,12 @@ body {
 }
 
 .container {
-    max-width: 700px; /* පිටු හැම එකක්ම එකම පළලකට තබා ගැනීමට */
+    max-width: 700px; /* align all pages */
     margin: 0 auto;
     padding: 60px 20px;
 }
 
-/* හැම පිටුවකම තියෙන පෙට්ටි (Cards) වල පොදු හැඩය */
+/* shapes of all boxes in every page */
 .card, .article-card, .contact-card {
     background: var(--card-bg);
     padding: 30px;
@@ -38,9 +36,7 @@ body {
 }
 
 
-/* ==========================================================================
-   2. INDEX / HOME PAGE SPECIFIC STYLES
-   ========================================================================== */
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -88,9 +84,7 @@ body {
 .nav-menu a:hover { color: white; padding-left: 10px; }
 
 
-/* ==========================================================================
-   3. BLOG PAGE SPECIFIC STYLES
-   ========================================================================== */
+
 .blog-navbar {
     display: flex;
     justify-content: space-between;
@@ -110,9 +104,7 @@ body {
 .btn-medium:hover { background-color: #7dd3fc; transform: translateY(-1px); }
 
 
-/* ==========================================================================
-   4. CONTACT PAGE SPECIFIC STYLES
-   ========================================================================== */
+
 .contact-card h2 {
     font-size: 24px;
     font-weight: 700;
@@ -184,17 +176,15 @@ button[type="submit"]:active { transform: scale(0.98); }
 #output { margin-top: 20px; font-size: 14px; text-align: center; font-weight: 600; }
 
 
-/* ==========================================================================
-   5. 📱 ADDED RESPONSIVE MEDIA QUERIES (පිටු 3ටම පොදු ජංගම දුරකථන සැකසුම්)
-   ========================================================================== */
+/* responsive for devices */
 @media (max-width: 600px) {
     /* 1. Global Container & Cards */
     .container {
-        padding: 30px 16px; /* කුඩා screen වල දෙපැත්තේ padding අඩු කරයි */
+        padding: 30px 16px; 
     }
 
     .card, .article-card, .contact-card {
-        padding: 20px; /* පෙට්ටි ඇතුළත ඇති ඉඩ ප්‍රමාණය අඩු කරයි */
+        padding: 20px; 
         border-radius: 12px;
     }
 
@@ -204,17 +194,17 @@ button[type="submit"]:active { transform: scale(0.98); }
     }
 
     .navbar h1 {
-        font-size: 22px; /* මාතෘකාව ජංගම දුරකථනයට ගැළපෙන සේ කුඩා කරයි */
+        font-size: 22px; /* reduce the topic size according to the device */
     }
 
     .nav-menu {
-        width: 80%; /* ජංගම දුරකථන වලදී මෙනු එක තිරයෙන් 80%ක් පළලට දිග හැරේ */
+        width: 80%; 
         right: -80%;
     }
 
     /* 3. Blog Page Adjustments */
     .blog-navbar {
-        flex-direction: column; /* "My Blog" නම සහ Menu ලින්ක්ස් එක යටට එකක් සිටින සේ සකසයි */
+        flex-direction: column; 
         align-items: flex-start;
         gap: 15px;
         margin-bottom: 35px;
@@ -226,7 +216,7 @@ button[type="submit"]:active { transform: scale(0.98); }
     }
 
     .nav-links a {
-        margin-left: 0; /* පැරණි වම්පස පරතරය ඉවත් කරයි */
+        margin-left: 0; 
     }
 
     .article-card h2 {
@@ -235,11 +225,11 @@ button[type="submit"]:active { transform: scale(0.98); }
 
     .article-card p {
         font-size: 15px;
-        text-align: left; /* ජංගම දුරකථන වල කියවීමේ පහසුව සඳහා text align එක වමට සකසයි */
+        text-align: left; 
     }
 
     .btn-medium {
-        width: 100%; /* බටන් එක ජංගම දුරකථන වලදී මුළු පළලටම (Full width) දිග හැරේ */
+        width: 100%; 
         justify-content: center;
         box-sizing: border-box;
     }
